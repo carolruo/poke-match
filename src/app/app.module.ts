@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PokemonsComponent } from './pokemons/pokemons.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PokematchComponent } from './pokematch/pokematch.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PokematchComponent } from './pokematch/pokematch.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
