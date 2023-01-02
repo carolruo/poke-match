@@ -1,20 +1,3 @@
-<div class="d-flex justify-content-center">
-    <div>
-        <div class="row">
-            <div>
-                <input type="text" id="pokedexInput" class="form-control" 
-                placeholder="Pesquisar Pokemons"/>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="list">
-    <!-- <app-pokemon-card *ngFor="let pokemon of pokemons" [pokemon]="pokemon"></app-pokemon-card> -->
     <app-pokemon-card *ngFor="let pokemon of pokemonService.pokemons" [pokemon]="pokemon"></app-pokemon-card>
 </div>
-<!-- <div *ngFor="let pokemon of pokemons.results" >
-  {{ pokemon.name }}
-</div> -->
-<!-- <div>
-  {{ pokemons | json }}
-</div> -->

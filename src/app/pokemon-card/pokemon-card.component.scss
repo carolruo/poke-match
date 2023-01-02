@@ -3,6 +3,9 @@
     flex-direction: column;
     margin: 15px 15px;
     width: 215px;
+    text-transform: capitalize;
+    background-color: #3333;
+    border-radius: 1px;
 }
 
 .number {
@@ -10,4 +13,22 @@
     font-size: 80%;
     padding-top: 2px;
     padding-bottom: 5px;
+}
+
+.types {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+}
+
+.type {
+    color: black;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 10px;
+    max-width: 110px;
+    text-align: center;
+    width: 38.4375%;
+    background: #cacaca;
 }
