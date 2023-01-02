@@ -1,10 +1,10 @@
-<div class="card text-white bg-dark mb-3" style="width: 18rem;">
-    <img [src]="pokemon.image" class="card-img-top" alt="...">
+<div class="card text-white bg-dark mb-3" style="width: 18rem;" *ngIf="pokemon">
+    <img [src]="pokemon.image" class="card-img-top" alt="..."/>
     <div class="card-body">
         <div class="number">Nº {{ pokemon.number }}</div>
         <h5 class="card-title">{{ pokemon.name }}</h5>
-        <p>HP: 20</p>
-        <p>Height: 12</p>
+        <div>HP: {{ pokemon.hp }}</div>
+        <div>Height: {{ pokemon.height }} inches</div>
         <p>Types:</p>
         <ul class="list-group list-group-flush">
             <li class="list-group-item text-white bg-dark" *ngFor="let type of pokemon.types">{{ type }}</li>

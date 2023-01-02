@@ -10,17 +10,11 @@
 </div>
 <div class="list">
     <!-- <app-pokemon-card *ngFor="let pokemon of pokemons" [pokemon]="pokemon"></app-pokemon-card> -->
-    <app-pokemon-card *ngFor="let pokemon of pokemons" [pokemon]="pokemon"></app-pokemon-card>
-    <app-pokemon-card></app-pokemon-card>
-    <app-pokemon-card></app-pokemon-card>
-    <app-pokemon-card></app-pokemon-card>
-    <app-pokemon-card></app-pokemon-card>
-    <app-pokemon-card></app-pokemon-card>
-    <app-pokemon-card></app-pokemon-card>
+    <app-pokemon-card *ngFor="let pokemon of pokemonService.pokemons" [pokemon]="pokemon"></app-pokemon-card>
 </div>
 <!-- <div *ngFor="let pokemon of pokemons.results" >
   {{ pokemon.name }}
 </div> -->
-<div>
+<!-- <div>
   {{ pokemons | json }}
-</div>
+</div> -->
