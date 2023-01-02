@@ -6,14 +6,16 @@ import { AppComponent } from './app.component';
 import { PokemonsComponent } from './pokemons/pokemons.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PokematchComponent } from './pokematch/pokematch.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { PokemonCardComponent } from './pokemon-card/pokemon-card.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonsComponent,
     NavbarComponent,
-    PokematchComponent
+    PokematchComponent,
+    PokemonCardComponent
   ],
   imports: [
     BrowserModule,

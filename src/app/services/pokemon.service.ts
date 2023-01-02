@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PokemonService {
+  pokemons = [];
 
   private BASE_API: string = 'https://pokeapi.co/api/v2/';
 
@@ -14,6 +15,6 @@ export class PokemonService {
   ) { }
 
   getAllPokemons(): Observable<any> {
-    return this.http.get(`${this.BASE_API}pokemon`);
+    return this.http.get(`${this.BASE_API}pokemon?limit=151`);
   }
 }
