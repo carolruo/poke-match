@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PokematchComponent } from './pokematch/pokematch.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

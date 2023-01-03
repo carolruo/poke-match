@@ -10,25 +10,44 @@ import { PokemonService } from '../services/pokemon.service';
 })
 export class PokemonsComponent implements OnInit, OnDestroy {
   pokemons: Pokemon[] = [];
-  subscription: Subscription = new Subscription();
+  subscription: Subscription = new Subscription();  
+  limit = 10;
+  page = 1;
+  offset = 0;
+  totalPokemons: number = 0;
+
 
   constructor(
     private pokemonService: PokemonService
   ) { }
   
   ngOnInit(): void {
-    this.subscription = this.pokemonService.getPokemons(20, 0)
-    .subscribe((result: any) => this.pokemons[result.id] = {
-      image: result.sprites.front_default,
-      number: result.id,
-      hp: result.stats[0].base_stat,
-      height: result.height,
-      name: result.name,
-      types: result.types.map((t: any) => t.type.name)
-    })
+    this.getPokemons();
   }
   
+  private getPokemons() {
+    this.subscription = this.pokemonService.getPokemons(this.limit, ((this.page * this.limit) - this.limit))
+      .subscribe((result: any) => {
+        this.totalPokemons += 1;
+
+        this.pokemons[result.id] = {
+          image: result.sprites.front_default,
+          number: result.id,
+          hp: result.stats[0].base_stat,
+          height: result.height,
+          name: result.name,
+          types: result.types.map((t: any) => t.type.name)
+        };
+      });
+  }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
+  }
+
+  changePage(event: any) {
+    this.page = event;
+    this.pokemons = [];
+    this.getPokemons();
   }
 }
