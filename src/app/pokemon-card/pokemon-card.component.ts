@@ -9,6 +9,6 @@ import { Pokemon } from '../model/Pokemon';
 export class PokemonCardComponent {
 
   @Input()
-  public pokemon!: Pokemon;
+  pokemon!: Pokemon;
 
 }
