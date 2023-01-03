@@ -34,7 +34,8 @@ export class PokemonsComponent implements OnInit, OnDestroy {
           image: result.sprites.front_default,
           number: result.id,
           hp: result.stats[0].base_stat,
-          height: result.height,
+          atk: result.stats[1].base_stat,
+          def: result.stats[2].base_stat,
           name: result.name,
           types: result.types.map((t: any) => t.type.name)
         };

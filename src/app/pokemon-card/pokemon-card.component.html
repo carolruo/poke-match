@@ -4,7 +4,8 @@
         <div class="number">Nº {{ pokemon.number }}</div>
         <h5 class="card-title">{{ pokemon.name }}</h5>
         <div>HP: {{ pokemon.hp }}</div>
-        <div>Height: {{ pokemon.height }} inches</div>
+        <div>Atk Power: {{ pokemon.atk }}</div>
+        <div>Defense: {{ pokemon.def }}</div>
         <div class="types">
             <div class="type" *ngFor="let type of pokemon.types">{{ type }}</div>
         </div>
