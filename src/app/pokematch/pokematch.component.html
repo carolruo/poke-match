@@ -1,5 +1,7 @@
 <div class="pokematch">
-    <img src="../../assets/pokemon-walk.gif" class="vulpix"/>
+    <img src="../../assets/pokemon-walk.gif" class="vulpix" />
     <h4>Are you feeling lucky? Try out and see what Pokémon you'll get!</h4>
-    <app-button></app-button>
+    <img src="../../assets/pokeball-3.png" class="pokeball mb-3"/>
+    <button type="button" class="btn btn-lg btn-outline-light" (click)="getRandomPokemon()" >I choose ...YOU!</button>
+    <app-pokemon-card *ngIf="pokemon" [pokemon]="pokemon"></app-pokemon-card>
 </div>

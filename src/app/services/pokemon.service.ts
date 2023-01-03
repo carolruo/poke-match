@@ -25,4 +25,8 @@ export class PokemonService {
       mergeMap((value: any) => value)
     );
   }
+
+  getPokemonById(id: number) {
+    return this.http.get<any>(`${this.BASE_URL}${id}`);
+  }
 }
