@@ -9,6 +9,7 @@ import { PokematchComponent } from './pokematch/pokematch.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     PokemonsComponent,
     NavbarComponent,
     PokematchComponent,
-    PokemonCardComponent
+    PokemonCardComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

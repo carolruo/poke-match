@@ -1,0 +1,19 @@
+.pokematch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h4 {
+    color: beige;
+    text-align: center;
+}
+
+.vulpix {
+    height: 120px;
+    width: 180px;
+}
+
+app-button {
+    margin-top: 30px;
+}
