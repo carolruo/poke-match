@@ -11,7 +11,7 @@ import { PokemonService } from '../services/pokemon.service';
 export class PokemonsComponent implements OnInit, OnDestroy {
   pokemons: Pokemon[] = [];
   subscription: Subscription = new Subscription();  
-  limit = 10;
+  limit = 15;
   page = 1;
   offset = 0;
   totalPokemons: number = 0;

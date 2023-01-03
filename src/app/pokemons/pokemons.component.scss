@@ -17,3 +17,11 @@
     max-width: 50%;
     align-self: center;
 }
+
+pagination-controls {
+    text-align: center;
+}
+
+::ng-deep ul > li:not(.active) > a {
+    background-color: #24252a !important;
+}
