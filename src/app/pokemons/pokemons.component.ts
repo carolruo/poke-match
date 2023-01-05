@@ -6,27 +6,25 @@ import { PokemonService } from '../services/pokemon.service';
 @Component({
   selector: 'app-pokemons',
   templateUrl: './pokemons.component.html',
-  styleUrls: ['./pokemons.component.scss']
+  styleUrls: ['./pokemons.component.scss'],
 })
 export class PokemonsComponent implements OnInit, OnDestroy {
   pokemons: Pokemon[] = [];
-  subscription: Subscription = new Subscription();  
+  subscription: Subscription = new Subscription();
   limit = 15;
   page = 1;
   offset = 0;
   totalPokemons: number = 0;
 
+  constructor(private pokemonService: PokemonService) {}
 
-  constructor(
-    private pokemonService: PokemonService
-  ) { }
-  
   ngOnInit(): void {
     this.getPokemons();
   }
-  
+
   private getPokemons() {
-    this.subscription = this.pokemonService.getPokemons(this.limit, ((this.page * this.limit) - this.limit))
+    this.subscription = this.pokemonService
+      .getPokemons(this.limit, this.page * this.limit - this.limit)
       .subscribe((result: any) => {
         this.totalPokemons += 1;
 
@@ -37,7 +35,7 @@ export class PokemonsComponent implements OnInit, OnDestroy {
           atk: result.stats[1].base_stat,
           def: result.stats[2].base_stat,
           name: result.name,
-          types: result.types.map((t: any) => t.type.name)
+          types: result.types.map((t: any) => t.type.name),
         };
       });
   }

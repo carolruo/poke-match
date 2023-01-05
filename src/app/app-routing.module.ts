@@ -4,13 +4,13 @@ import { PokematchComponent } from './pokematch/pokematch.component';
 import { PokemonsComponent } from './pokemons/pokemons.component';
 
 const routes: Routes = [
-  { path: 'pokedex', component: PokemonsComponent},
-  { path: 'pokematch', component: PokematchComponent},
-  { path: '', pathMatch:'full', redirectTo: 'pokematch'}
+  { path: 'pokedex', component: PokemonsComponent },
+  { path: 'pokematch', component: PokematchComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'pokematch' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

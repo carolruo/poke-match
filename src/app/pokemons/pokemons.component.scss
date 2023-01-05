@@ -1,27 +1,27 @@
 .list {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
     margin-left: 20px;
     margin-right: 20px;
+    justify-content: center;
 }
 
 .pokedex {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
 }
 
 .btn {
-    max-width: 50%;
     align-self: center;
+    max-width: 50%;
 }
 
 pagination-controls {
     text-align: center;
 }
 
-::ng-deep ul > li:not(.active) > a {
+::ng-deep ul>li:not(.active)>a {
     background-color: #24252a !important;
 }

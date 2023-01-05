@@ -1,25 +1,26 @@
 .card {
+    background: #3333;
+    border-radius: 1px;
     display: flex;
     flex-direction: column;
     margin: 15px 15px;
-    width: 215px;
     text-transform: capitalize;
-    background: #3333;
-    border-radius: 1px;
+    width: 215px;
 }
 
-.card::after, .card::before {
-    content: "";
-    position: absolute;
-    opacity: 0.3;
+.card::after,
+.card::before {
+    background: #000;
     border-radius: inherit;
-    width: 100%;
+    bottom: 0;
+    content: "";
     height: 100%;
     left: 0;
-    bottom: 0;
-    z-index: -1;
+    opacity: 0.3;
+    position: absolute;
     transition: transform 0.3s ease;
-    background: #000;
+    width: 100%;
+    z-index: -1;
 }
 
 .card:hover {
@@ -38,8 +39,8 @@
 .number {
     color: #919191;
     font-size: 80%;
-    padding-top: 2px;
     padding-bottom: 5px;
+    padding-top: 2px;
 }
 
 .types {
@@ -49,13 +50,13 @@
 }
 
 .type {
-    color: black;
+    background: #cacaca;
     border-radius: 3px;
+    color: black;
     font-size: 14px;
     line-height: 18px;
     margin: 0 10px;
     max-width: 110px;
     text-align: center;
     width: 38.4375%;
-    background: #cacaca;
 }
