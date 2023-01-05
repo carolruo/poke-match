@@ -1,27 +1,21 @@
-# Pokedex
+# Pokematch & Pokedex
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+Objetivo: criar uma página web consumindo a PokeAPI.
 
-## Development server
+Esse projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 14.0.0.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Aplicação no ar
 
-## Code scaffolding
+[Clique aqui para ir para a página web (Netlify)](https://carolruo.netlify.app/pokematch)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Pokematch
 
-## Build
+Tente a sorte e veja qual Pokémon será o seu escolhido randomicamente.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Pokedex
 
-## Running unit tests
+Listagem de todos os Pokémons dentro de uma Pokedex com paginação.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Rodar localmente
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Use `ng serve`. Navegue para `http://localhost:4200/`.
